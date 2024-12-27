@@ -1,0 +1,31 @@
+header {
+    background-color: #685B47;
+    height: 80px;
+    margin-left: -12px;
+    margin-right: -12px;
+    color: white;
+}
+
+.logo2 {
+    margin-left: -4px;
+}
+
+.city {
+    background-color: #685B47;
+    border: none;
+    color: white;
+
+}
+
+.search-button {
+    width: 50px;
+}
+
+.header-icons {
+    padding-left: 120px;
+    padding-top: 5px;
+
+}
+.header-icons a{
+    color: white;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rustic Reclaimed Wood Platform Bed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./open.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+  <header>
+    <!-- top part of our website-->
+    <div class="nav d-flex p-3">
+
+      <div class="logo">
+        <span class="fs-4 ms-3  "> Rent <span class="fw-bolder logo2 ">ly</span> </span>
+      </div>
+
+      <div class="address ">
+        <select name="address" class="city ms-3 mt-1" id="">
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="">More soon</option>
+        </select>
+      </div>
+
+
+
+      <!-- search bar -->
+      <div class=" search ms-5 w-50">
+        <div class="input-group w-100">
+          <input type="text" class="input-group-text form-control border rounded-start-pill"
+            placeholder="Search products...">
+          <button class="btn btn-warning border rounded-end-pill border-warning search-button"><i
+              class="bi bi-search text-black fs-5"></i> </button>
+        </div>
+      </div>
+
+      <div class="header-icons ms-5 fs-5 ">
+        <a href="./fav.html"><span class="bi bi-heart me-3 "></span> </a>
+        <a href="./cart.html"> <span class="bi bi-cart me-3"></span></a>
+        <a href="./login.html"> <span class="bi bi-person me-3"></span> </a>
+        <span></span>
+      </div>
+  </header>
+  <div class="container mt-5">
+    <div class="row align-items-start g-4">
+      <!-- Image Section -->
+      <div class="col-md-6">
+        <img src="./images/bed1.jpg" alt="Main Image" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Details Section -->
+      <div class="col-md-6">
+        <h2 class="fw-bold">Wooden Black Double Bed</h2>
+        <p>
+          Rent the Bordo Queen Bed - Transform your space into modern art with this solid wood bed. The juxtaposition of
+          a variety of design choices gives this piece an eye-catching yet harmonious rhythm that can uplift any
+          setting. Designed with a modernist aesthetic, you can see an interplay of popping colors and prints on the
+          headboard which scream Bohemian and contrast playfully with the generously sized, dark solid-wood frame below.
+          If you're looking to revamp your bedroom, here's where you should begin!
+        </p>
+
+        <!-- Time Period Options -->
+        <div class="btn-group w-100 mb-4" role="group" aria-label="Time Period Options">
+          <button class="btn btn-secondary" data-price="₹499" onclick="updatePrice(this)">3 MONTHS</button>
+          <button class="btn btn-outline-secondary" data-price="₹899" onclick="updatePrice(this)">6
+            MONTHS</button>
+          <button class="btn btn-outline-secondary" data-price="₹1299" onclick="updatePrice(this)">9
+            MONTHS</button>
+          <button class="btn btn-outline-secondary" data-price="₹1399" onclick="updatePrice(this)">15
+            MONTHS</button>
+        </div>
+
+        <h4 class="fw-bold mb-4">₹<span id="rent-amount">499</span>/Month</h4>
+        <a href="./kvc.html"> <button class="btn btn-primary w-100 mb-3">Rent </button></a>
+        <p>
+          <strong>SKU:</strong> 587426-2-1 &nbsp; | &nbsp;
+          <strong>Category:</strong> Bedroom &nbsp; | &nbsp;
+          <strong>Tags:</strong> Dark, Modern
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function updatePrice(button) {
+      // Reset all buttons to default outline style
+      const buttons = document.querySelectorAll('.btn-group .btn');
+      buttons.forEach(btn => btn.classList.replace('btn-secondary', 'btn-outline-secondary'));
+
+      // Set the clicked button as active
+      button.classList.replace('btn-outline-secondary', 'btn-secondary');
+
+      // Update the rent amount display
+      const price = button.getAttribute('data-price');
+      document.getElementById('rent-amount').innerText = price.replace('₹', '');
+    }
+  </script>
+</body>
+
+</html>

@@ -32,6 +32,9 @@ header {
     padding-top: 5px;
 
 }
+.header-icons a{
+    color: white;
+}
 
 body {
     font-family: Arial, sans-serif;
