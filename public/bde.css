@@ -1,0 +1,75 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #685B47;
+    height: 80px;
+    margin-left: -12px;
+    margin-right: -12px;
+    color: white;
+}
+
+.logo2 {
+    margin-left: -4px;
+}
+
+.city {
+    background-color: #685B47;
+    border: none;
+    color: white;
+
+}
+
+.search-button {
+    width: 50px;
+}
+
+.header-icons {
+    padding-left: 120px;
+    padding-top: 5px;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.filter-section {
+    border-right: 1px solid #ddd;
+}
+
+.filter-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-price {
+    color: gray;
+    margin-top: 5px;
+}
+
+
+
+/* styling part of search bar  */
+
