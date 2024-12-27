@@ -2,7 +2,7 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  color: white;
+  
 }
 
 /* styling part of search bar  */
@@ -15,15 +15,18 @@ header {
   height: 80px;
   margin-left: -12px;
   margin-right: -12px;
+  color: white;
 }
 
 .logo2 {
   margin-left: -4px;
+  color: white;
 }
 
 .city {
   background-color: #685B47;
   border: none;
+  color: white;
 
 }
 
@@ -31,14 +34,18 @@ header {
   width: 50px;
 }
 
-.header-icons {
+.header-icons  {
   padding-left: 120px;
   padding-top: 5px;
+  color: white;
 
+}
+.header-icons a{
+  color: white;
 }
 
 .stock {
-  background-color: rgb(255, 245, 203);
+  background-color: #685b475e;
   height: 250px;
   width: 180px;
 
@@ -124,4 +131,120 @@ main {
 
 .navigation button:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  width: 98.9%;
+  margin-left: 13px;
+}
+
+.footer {
+  background-color: #7d6954;
+  /* Brown background */
+  color: #fff;
+  /* White text color */
+  padding: 40px 20px;
+}
+
+.footer .footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons a {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+  color: #ccc;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* part3 */
+.part3 {
+  background-color: white;
+  width: 98.9%;
+  margin-left: 14px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature {
+  text-align: center;
+  max-width: 200px;
+}
+
+.feature img {
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin: 10px;
+  color: black;
+}
+
+.feature p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+.featureproduct{
+  display: flex;
+  justify-content: space-between;
+}
+li{
+  font-weight: bold;
+  margin-left: 20px;
+  list-style: none;
+}
+
+.jj:hover{
+ 
+  transition: 1s;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  box-shadow: red;
+
+}
+.part4{
+  color: black;
 }

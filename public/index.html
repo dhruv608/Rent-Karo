@@ -17,7 +17,7 @@
     <div class="nav d-flex p-3">
 
       <div class="logo">
-        <span class="fs-4 ms-3  "> Rent <span class="fw-bolder logo2 ">Wallah</span> </span>
+        <span class="fs-4 ms-3  "> Rent <span class="fw-bolder logo2 ">ly</span> </span>
       </div>
 
       <div class="address ">
@@ -26,21 +26,23 @@
           <option value="">More soon</option>
         </select>
       </div>
-      
+
 
 
       <!-- search bar -->
       <div class=" search ms-5 w-50">
         <div class="input-group w-100">
-          <input type="text" class="input-group-text form-control border rounded-start-pill" placeholder="Search products...">
-          <button class="btn btn-warning border rounded-end-pill border-warning search-button"><i class="bi bi-search text-black fs-5"></i> </button>
+          <input type="text" class="input-group-text form-control border rounded-start-pill"
+            placeholder="Search products...">
+          <button class="btn btn-warning border rounded-end-pill border-warning search-button"><i
+              class="bi bi-search text-black fs-5"></i> </button>
         </div>
       </div>
 
       <div class="header-icons ms-5 fs-5 ">
-        <span class="bi bi-heart me-3 "></span>
-        <span class="bi bi-cart me-3"></span>
-        <span class="bi bi-person me-3"></span>
+        <a href="./fav.html"><span class="bi bi-heart me-3 "></span> </a>
+        <a href="./cart.html"> <span class="bi bi-cart me-3"></span></a>
+        <a href="./login.html"> <span class="bi bi-person me-3"></span> </a>
         <span></span>
       </div>
   </header>
@@ -48,113 +50,412 @@
 
 
 
-<section class="mt-4 ms-3 d-flex">
-<div class="section1 d-grid">
-<img src="./images/cour1.jpg" alt="" width="402px" height="288px" class="mb-3">
-<img src="./images/cour2.jpg" alt="" width="402px" height="288px">
-</div>
+  <section class="mt-4 ms-3 d-flex">
+    <div class="section1 d-grid">
+      <img src="./images/cour1.jpg" alt="" width="402px" height="288px" class="mb-3">
+      <img src="./images/cour2.jpg" alt="" width="402px" height="288px">
+    </div>
 
-<div class="slider ms-3">
-  <div class="slides">
-      <img src="./images/coursal2.jpg" alt="Image 1">
-      <img src="./images/coural4.jpg" alt="">
+    <div class="slider ms-3">
+      <div class="slides">
+        <img src="./images/coursal2.jpg" alt="Image 1">
+        <img src="./images/coursell4.jpg" alt="">
+        <img src="./images/coural4.jpg" alt="">
 
-  </div>
-  <div class="navigation">
-      <button class="prev">❮</button>
-      <button class="next">❯</button>
-  </div>
-</div>
+      </div>
+      <div class="navigation">
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+      </div>
+    </div>
 
-<script>
-  const slides = document.querySelector('.slides');
-  const images = document.querySelectorAll('.slides img');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
+    <script>
+      const slides = document.querySelector('.slides');
+      const images = document.querySelectorAll('.slides img');
+      const prevButton = document.querySelector('.prev');
+      const nextButton = document.querySelector('.next');
 
-  let currentIndex = 0;
+      let currentIndex = 0;
 
-  function showSlide(index) {
-      if (index >= images.length) {
+      function showSlide(index) {
+        if (index >= images.length) {
           currentIndex = 0;
-      } else if (index < 0) {
+        } else if (index < 0) {
           currentIndex = images.length - 1;
-      } else {
+        } else {
           currentIndex = index;
+        }
+        slides.style.transform = `translateX(${-currentIndex * 100}%)`; // Corrected syntax
       }
-      slides.style.transform = `translateX(${-currentIndex * 100}%)`; // Corrected syntax
-  }
 
-  // Event listeners for manual navigation
-  nextButton.addEventListener('click', () => {
-      showSlide(currentIndex + 1);
-  });
+      // Event listeners for manual navigation
+      nextButton.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+      });
 
-  prevButton.addEventListener('click', () => {
-      showSlide(currentIndex - 1);
-  });
+      prevButton.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+      });
 
-  // Automatic sliding every 3 seconds
-  setInterval(() => {
-      showSlide(currentIndex + 1); // Slide to the next image automatically
-  }, 3000); // Change every 3 seconds (3000 milliseconds)
-</script>
+      // Automatic sliding every 3 seconds
+      setInterval(() => {
+        showSlide(currentIndex + 1); // Slide to the next image automatically
+      }, 3000); // Change every 3 seconds (3000 milliseconds)
+    </script>
 
 
 
 
-</section>
+  </section>
 
   <!-- collections -->
-   <main class="d-flex ">
+  <main class="d-flex ">
     <a href="bed.html" target="_blank">
-    <div class="stock me-3">
- <img src="./images/mainbed.png" alt="" >
- <p>BedRoom</p>
-    </div>
-  </a>
-  <a href="">
-    <div class="stock me-3">
-<img src="./images/mainchair.png" alt="">
-<p>Chairs</p>
-    </div>
-  </a>
-  <a href="./cycle.html">
-    <div class="stock me-3">
-      <img src="./images/maincycle.png" alt="" >
-      <p>Bi-Cycles</p>
-    </div>
-  </a>
-  <a href="">
-    <div class="stock me-3">
-      <img src="./images/mainsofa.png" alt="" >
-      <p>Living Room</p>
-    </div>
-  </a>
-  <a href="">
-    <div class="stock me-3">
-      <img src="./images/mainwashing.png" alt="" >
-      <p>Washing</p>
-    </div>
-  </a>
-  <a href="">
-    <div class="stock me-3">
-      <img src="./images/mainmirco.png" alt="" >
-      <p>Washing</p>
-    </div>
-  </a>
-  <a href="">
-    <div class="stock me-3">
-      <img src="./images/mainfridgee.png" alt=""  >
-      <p>Refrigerator</p>
-    </div>
-  </a>
+      <div class="stock me-3">
+        <img src="./images/mainbed.png" alt="">
+        <p>Bed</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="stock me-3">
+        <img src="./images/mainchair.png" alt="">
+        <p>Chairs</p>
+      </div>
+    </a>
+    <a href="./cycle.html">
+      <div class="stock me-3">
+        <img src="./images/maincycle.png" alt="">
+        <p>Bi-Cycles</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="stock me-3">
+        <img src="./images/mainsofa.png" alt="">
+        <p>Living Room</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="stock me-3">
+        <img src="./images/mainwashing.png" alt="">
+        <p>Washing</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="stock me-3">
+        <img src="./images/mainmirco.png" alt="">
+        <p>Kitchen </p>
+      </div>
+    </a>
+    <a href="">
+      <div class="stock me-3">
+        <img src="./images/mainfridgee.png" alt="">
+        <p>Refrigerator</p>
+      </div>
+    </a>
+
+
+  </main>
+
   
+  <div >
+    
+    <div class="featureproduct m-3" style="color: black;">
+                  <div> <h1>Featured Products</h1></div>
 
-   </main>
+                  <div>
+                    <ul class="d-flex align-content-center justify-content-center pt-2">
+                      <li>New arrivals</li>
+                      <li>Top Trending</li>
+                      <li>Best Seller</li>
+                    </ul>
+                  </div>
+                  
+        </div>
+                <hr class="me-3 ms-3">
+                <div class="row m-2 mt-5">
+
+                    <div class="col jj">
+                    <img src="chair1.jpg" alt="" height="220" width="220">
+                    <h5>Urban Chic Barstool Set</h5>
+                    <label for="">Office</label>
+                    <p>From <b> $30</b>From/Month
+                      View options</p>
+                  </div>
+
+                  <div class="col jj">
+                    <img src="chair2.jpg" alt="" height="220" width="220">
+                    <h5>Atila Chairs Set</h5>
+                    <label for="">Office</label>
+                    <p>From <b> $30</b>From/Month
+                      View options</p>
+                    </div>
+                    
+                    <div class="col jj">
+                      <img src="chair3.jpg" alt="" height="220" width="220">
+                      <h5>Ovios Ergonomic Office Set</h5>
+                      <label for="">Office</label>
+                      <p>From <b> $35</b>From/Month
+                        View options</p>
+                      </div>
+                      
+                      <div class="col jj">
+                        <img src="chair4.jpg" alt="" height="220" width="220">
+                    <h5>Luca Erba Set</h5>
+                    <label for="">Office</label>
+                    <p>From <b> $40</b>From/Month
+                      View options</p>
+                    </div>
+                    
+                    <div class="col jj">
+                      <img src="chair6.jpg" alt="" height="220" width="220">
+                      <h5>homall Gaming chair Set</h5>
+                      <label for="">Office</label>
+                      <p>From <b> $39</b>From/Month
+                        View options</p>
+                      </div>
+                      
+                    </div>
+                    <div class="row m-2">
+                      
+                      <div class="col jj">
+                        <img src="chair7.jpg" alt="" height="220" width="220">
+                        <h5>Jonah Chair Set</h5>
+                        <label for="">Office</label>
+                        <p>From <b> $41</b>From/Month
+                          View options</p>
+                        </div>
+                        
+                        <div class="col jj">
+                          <img src="chair8.jpg" alt="" height="220" width="220">
+                          <h5>Dinner chair Set</h5>
+                          <label for="">Office</label>
+                          <p>From <b> $41</b>From/Month
+                            View options</p>
+                          </div>
+                          
+                          <div class="col jj">
+                            <img src="chair9.jpg" alt="" height="220" width="220">
+                            <h5>vodrohome Accent chair Set</h5>
+                            <label for="">Office</label>
+                            <p>From <b> $51</b>From/Month
+                              View options</p>
+                            </div>
+                            
+                            <div class="col jj">
+                              <img src="chair10.jpg" alt="" height="220" width="220">
+                              <h5>VeroMan Dining Set</h5>
+                              <label for="">Office</label>
+                              <p>From <b> $31</b>From/Month
+                                View options</p>
+                              </div>
+                              
+                              <div class="col jj">
+                                <img src="chair12.jpg" alt="" height="220" width="220">
+                                <h5>Neo Chair Office Desk computer Set</h5>
+                                <label for="">Office</label>
+                                <p>From <b> $51</b>From/Month
+                                  View options</p>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="part3">
+                          
+                              <section class="features" style="background-color: FCFBF9;">
+                                <div class="feature">
+                                  <img src="./images/secure.jpg" alt="Secure Transactions Icon">
+                                  <h3>Secure Transactions</h3>
+                                  <p>Make worry-free payments with our trusted payment.</p>
+                                </div>
+                                <div class="feature">
+                                  <img src="./images/shipping.png" alt="Reliable Shipping Icon">
+                                  <h3>Reliable Shipping</h3>
+                                  <p>Quick and reliable delivery of your purchases.</p>
+                                </div>
+                                <div class="feature">
+                                  <img src="./images/return.jpg" alt="Hassle-Free Returns Icon">
+                                  <h3>Hassle-Free Returns</h3>
+                                  <p>Enjoy our extended 60-day return policy.</p>
+                                </div>
+                                <div class="feature">
+                                  <img src="./images/support.jpg" alt="Customer Support Icon">
+                                  <h3>Customer Support</h3>
+                                  <p>Our dedicated help center is available 24/7.</p>
+                                </div>
+                              </section>
+                          
+                            </div>
+
+                            <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Rentley</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<div class="bg-dark text-light">
+
+    <div class="container py-5">
+        <h1 class="text-center mb-4">FAQs - Rentley</h1>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is Rentley?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Rentley is a service that lets you rent home utilities like appliances, furniture, and other
+                        essentials instead of buying them. We’re here to make life easier for students and professionals
+                        by offering affordable, flexible, and hassle-free solutions for your everyday needs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How does the rental process work?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        It’s super simple! Browse our collection of home utilities, select what you need, choose your
+                        rental period, and place the order. We’ll take care of delivery, setup, and pickup when you're
+                        done.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Who can rent from Rentley?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Rentley is perfect for corporate professionals, or anyone who needs home utilities for short- or
+                        long-term use. Whether you’re setting up a temporary home or want to avoid the hassle of buying,
+                        we’ve got you covered.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        What is the minimum rental period?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our minimum rental period is usually one month, but we offer flexible options depending on your
+                        needs. Feel free to reach out if you have a specific timeline in mind!
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What happens if the product gets damaged while I’m using it?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We get it—accidents happen! If something gets damaged, just let us know right away. Minor wear
+                        and tear is covered, but significant damage might involve a repair fee. We'll work with you to
+                        sort it out smoothly.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Do you offer delivery and pickup services?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absolutely! We deliver your chosen items right to your doorstep and even help with setup. When
+                        your rental period is over, we’ll pick everything up—no stress for you!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+</html>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Social Icons -->
+        <div class="col-md-4 mb-3">
+          <h4 class="fw-bold">Rently</h4>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-wordpress"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h5 class="footer-heading">Footer Menu</h5>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="tel:+">Contact us</a></li>
+            <li><a href="mailto:rentwallah@gmail.com">Email us</a></li>
+          </ul>
+        </div>
 
 
-   
+
+        <!-- Contact Details -->
+        <div class="col-md-4 mb-3">
+          <h5 class="footer-heading">Karnataka</h5>
+          <p>Brigade Signature Tower 12th Floor<br>Banglore, 560049</p>
+          <br>
+
+
+
+        </div>
+
+        <!-- Footer Menu -->
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
 </body>
 
 </html>
