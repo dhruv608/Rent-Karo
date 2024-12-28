@@ -11,31 +11,68 @@
 
 <body>
     <div class="container text-center py-5">
-        <h3 class="fw-bold">Your Cart Looks A Little Empty!</h3>
-        <p class="text-muted">Start  Renting with us</p>
+        <!-- <h3 class="fw-bold">Your Cart Looks A Little Empty!</h3> -->
+        <p class="fs-2 fw-bold">Start Renting with us</p>
 
         <!-- Cart Image -->
         <div class="my-4">
-            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Cart Icon" class="img-fluid" style="max-width: 150px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Cart Icon" class="img-fluid"
+                style="max-width: 150px;">
+        </div>
+        <h3 class="text-danger fw-bolder">Cart</h3>
+        <div id="cart" class="ms-2">
+            <p class="fw-bold fs-3">Total items in cart: <span id="cart-items-count">0</span></p>
+            <p class="fw-bold fs-4 text-success">Total price: ₹<span id="cart-total-price">0.00</span></p>
         </div>
 
-        <div class="row mt-4">
-            <!-- Left Section -->
-            <!-- <div class="col-md-6 text-center">
-                <p class="text-muted">Looking to <br> <strong>BUY furniture?</strong></p>
-               <a href=""> <button class="btn btn-primary rounded-pill px-4">EXPLORE BUYING</button>
-            </div> -->
+        <!-- Remove All Items Button -->
+        <button id="remove-all" class="btn btn-danger mt-3">Remove All Items</button>
 
+        <div class="row mt-4">
             <!-- Right Section -->
-            <div class="col-md-6 text-center " style="margin-left: 340px;">
-                <p class="text-muted">Looking to <br> <strong>RENT ?</strong></p>
-              <a href="./index.html">  <button class="btn btn-warning text-white rounded-pill px-4">EXPLORE RENTING</button></a>
+            <div class="col-md-6 text-center" style="margin-left: 290px;">
+                <p class="text-muted">Looking to <br> <strong>RENT?</strong></p>
+                <a href="./index.html"><button class="btn btn-warning text-white rounded-pill px-4">EXPLORE
+                        RENTING</button></a>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+    <script>
+        // Initialize cart from localStorage or create a new one
+        let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], totalItems: 0, totalPrice: 0 };
+
+        // Function to update localStorage and cart summary
+        function updateCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update cart summary in the UI
+            document.getElementById('cart-items-count').textContent = cart.totalItems;
+            document.getElementById('cart-total-price').textContent = cart.totalPrice.toFixed(2);
+        }
+
+        // Event listener for "Remove All Items" button
+        document.getElementById('remove-all').addEventListener('click', () => {
+            // Reset the cart
+            cart.items = [];
+            cart.totalItems = 0;
+            cart.totalPrice = 0;
+
+            // Update the cart
+            updateCart();
+
+            // Alert the user
+            alert("All items have been removed from the cart.");
+        });
+
+        // Display cart summary on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCart();
+        });
+    </script>
 </body>
 
 </html>
